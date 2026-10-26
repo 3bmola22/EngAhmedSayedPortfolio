@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Archivo:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+/* class-based dark mode (html.dark) | الوضع الليلي يعتمد على كلاس dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================================================
+   🎨 THEME TOKENS  |  ألوان الثيم
+   ----------------------------------------------------------------------------
+   ✏️ DARK MODE COLORS below — LIGHT MODE COLORS in the `html:not(.dark)` block.
+   ✏️ ألوان الوضع الليلي بالأسفل — وألوان الوضع النهاري في كتلة html:not(.dark)
+   ========================================================================== */
+@theme {
+  --color-amber: #f5a524; /* brand fill | اللون الأساسي للخلفيات المميزة */
+  --color-ink: #0e2036; /* fixed navy used for text on amber buttons | كحلي ثابت لنص الأزرار */
+
+  /* DARK (default) | الليلي (الافتراضي) */
+  --color-surface: #0e2036;      /* page background | خلفية الصفحة */
+  --color-surface-alt: #0a1728;  /* alternating sections | الأقسام البديلة */
+  --color-surface-2: #14294a;    /* cards | البطاقات */
+  --color-head: #ffffff;         /* headings | العناوين */
+  --color-body: #cddcee;         /* body text | نص المحتوى */
+  --color-muted: #92abc7;        /* secondary text | النص الثانوي */
+  --color-line: #2a4062;         /* borders | الحدود */
+  --color-accent: #f5a524;       /* text accent | لون النص المميز */
+  --color-grid: #24405f;         /* blueprint grid lines | خطوط الشبكة */
+  --color-outline: #ffffff;      /* outlined display text | النص المفرّغ */
+
+  --font-display: "Big Shoulders Display", "Cairo", sans-serif;
+  --font-sans: "Archivo", "Cairo", sans-serif;
+  --font-mono: "Courier New", monospace;
+
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-float-delayed: float 6s ease-in-out 1.2s infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+}
+
+/* ============================================================================
+   ☀️ LIGHT MODE  |  الوضع النهاري
+   ========================================================================== */
+html:not(.dark) {
+  --color-surface: #eef2f7;
+  --color-surface-alt: #ffffff;
+  --color-surface-2: #ffffff;
+  --color-head: #0e2036;
+  --color-body: #35485e;
+  --color-muted: #5d7288;
+  --color-line: #cfd9e4;
+  --color-accent: #b06d00;
+  --color-grid: #b9c8d8;
+  --color-outline: #0e2036;
+  --color-amber: #f5a524;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-body);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* Arabic: use Cairo everywhere for proper letterforms | للعربية نستخدم خط القاهرة */
+[dir="rtl"] body,
+[dir="rtl"] .font-display {
+  font-family: "Cairo", sans-serif;
+}
+[dir="rtl"] .font-display {
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+/* Blueprint grid background | خلفية شبكة المخططات الهندسية */
+.blueprint {
+  background-color: var(--color-surface);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-grid) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-grid) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(color-mix(in srgb, var(--color-grid) 28%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-grid) 28%, transparent) 1px, transparent 1px),
+    radial-gradient(ellipse at 70% 15%, color-mix(in srgb, var(--color-grid) 40%, transparent), transparent 62%);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px, 100% 100%;
+}
+
+/* Light sheet background | خلفية لوحة فاتحة بشبكة خفيفة */
+.paper {
+  background-color: var(--color-surface-alt);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-grid) 22%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-grid) 22%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Card with drafting-style hover | بطاقة بأسلوب الرسم الهندسي */
+.card-paper {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-line);
+  box-shadow: 4px 4px 0 0 color-mix(in srgb, var(--color-head) 10%, transparent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
+    background-color 0.35s ease;
+}
+.card-paper:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 0 color-mix(in srgb, var(--color-accent) 40%, transparent);
+  border-color: var(--color-accent);
+}
+
+/* Panel with strong fill (CV banner) | لوحة بخلفية قوية */
+.panel-cta {
+  background: var(--color-surface);
+  border: 2px solid var(--color-line);
+  color: var(--color-head);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+/* Outlined display text | نص مفرّغ للعناوين */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px color-mix(in srgb, var(--color-outline) 75%, transparent);
+}
+[dir="rtl"] .text-outline {
+  -webkit-text-stroke: 1.5px color-mix(in srgb, var(--color-outline) 75%, transparent);
+}
+
+/* Content swap fade (category description, modal) | انتقال ناعم عند تغيير المحتوى */
+.fade-swap {
+  animation: fadeSwap 0.35s ease both;
+}
+@keyframes fadeSwap {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Theme transition helper | انتقال ناعم عند تبديل الوضع */
+.theme-fade,
+.theme-fade * {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
