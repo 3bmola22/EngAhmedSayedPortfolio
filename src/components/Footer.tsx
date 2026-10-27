@@ -13,7 +13,7 @@ export default function Footer() {
           <span className="font-display font-bold tracking-wider">{t.brand}</span>
         </a>
         <p className="text-center text-xs text-muted">
-          © {profile.graduationYear} {"3bmola@gmail.com"} — {t.footer.rights}
+          © {profile.graduationYear} {"3bmola22@gmail.com"} — {t.footer.rights}
         </p>
         <p className="flex items-center gap-1.5 text-xs text-muted">
           {t.footer.basedOn}{" "}
