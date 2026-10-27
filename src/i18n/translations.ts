@@ -1,7 +1,8 @@
 /* ============================================================================
-   🌍 TRANSLATIONS  |  الترجمات
-   ✏️ Edit any English text in `en` and its Arabic version in `ar`.
-   ✏️ عدّل أي نص إنجليزي في en ونسخته العربية في ar.
+   🌍 TRANSLATIONS | الترجمات
+   ----------------------------------------------------------------------------
+   💡 HINT: هذا الملف يحتوي على جميع النصوص المترجمة للموقع باللغتين (EN / AR).
+   عند إضافة قسم جديد أو تغيير أي نص في الواجهة، قم بتحديث القيم هنا للغتين.
    ========================================================================== */
 
 export type Lang = "en" | "ar";
@@ -10,11 +11,14 @@ export const translations = {
   en: {
     dir: "ltr",
     brand: "AHMED GALAL",
+    
+    // 💡 HINT: Navigation bar links / روابط شريط التنقل
     nav: { about: "About", projects: "Projects", skills: "Skills", contact: "Contact" },
     downloadCv: "Download CV",
     langButton: "عربي",
     theme: { toLight: "Light mode", toDark: "Dark mode" },
 
+    // 💡 HINT: Hero Section / القسم الرئيسي في أعلى الصفحة
     hero: {
       kicker: "Architect — Cairo, Egypt",
       firstName: "AHMED",
@@ -31,6 +35,7 @@ export const translations = {
       scale: "SCALE 1:1",
     },
 
+    // 💡 HINT: About Me Section / قسم نبذة عني
     about: {
       number: "01",
       label: "About Me",
@@ -58,31 +63,37 @@ export const translations = {
       englishLevel: "Professional Working Proficiency",
     },
 
+    // 💡 HINT: Projects Section & Filters / قسم المشاريع والتصنيفات
     projects: {
       number: "02",
       label: "Selected Work",
       sheet: "SHEET A-02",
       title: "Projects",
       subtitle:
-        "Six selected projects in three categories — Exterior Design, Modern Villa and Interior Design. Every project has its own photo slider with all its views.",
+        "seven selected projects in four categories — Exterior Design, Modern Villa, Interior Design and Architecture. Every project has its own photo slider with all its views.",
       all: "All Projects",
       exterior: "Exterior Design",
       villa: "Modern Villa",
       interior: "Interior Design",
-      // One-line description shown under the filter index for each category
+      architecture: "Architecture",
+      
+      // 💡 HINT: Category Descriptions / أوصاف الفلاتر والتصنيفات
       catDesc: {
-        all: "Every project in the portfolio — exterior, villa and interior work.",
+        all: "Every project in the portfolio — exterior, villa, interior and architecture work.",
         exterior: "Façades, commercial buildings and site massing studies.",
         villa: "Private modern villas and family residences.",
         interior: "Interior architecture, materials and 3D visualization.",
+        architecture: "Integrated architectural complexes and urban master plans.",
       },
       projectWord: "Projects",
       viewProject: "View details",
-      // 🧰 Tool chains — shown as badges on cards & inside the modal
-      //سلاسل الأدوات — تظهر كبادجات على الكروت وداخل نافذة التفاصيل
+
+      // 💡 HINT: Tool Chains Labels / مسميات البرامج والأدوات التي تظهر كبادجات
       "sketchup-vray": "SketchUp + V-Ray",
       "max-vray": "3ds Max + V-Ray",
       "cad-revit": "AutoCAD + Revit",
+      "autocad-sketchup-revit-lumion": "AutoCAD + SketchUp + Revit + Lumion",
+      
       status: { complete: "Completed", ongoing: "In progress" },
       reset: "Show all projects",
       imagePlaceholder: "Renders coming soon",
@@ -97,6 +108,7 @@ export const translations = {
       slidesCount: "photos",
     },
 
+    // 💡 HINT: Skills & Experience Section / قسم المهارات والخبرة
     skills: {
       number: "03",
       label: "Skills & Experience",
@@ -122,6 +134,7 @@ export const translations = {
       experienceTag: "Project Work",
     },
 
+    // 💡 HINT: Contact Section / قسم التواصل
     contact: {
       number: "04",
       label: "Contact",
@@ -137,6 +150,7 @@ export const translations = {
       cvHint: "Prefer the full picture? Grab my CV.",
     },
 
+    // 💡 HINT: Footer Section / تذييل الصفحة
     footer: {
       rights: "All rights reserved.",
       basedOn: "Based on",
@@ -147,11 +161,14 @@ export const translations = {
   ar: {
     dir: "rtl",
     brand: "أحمد جلال",
+    
+    // 💡 HINT: روابط شريط التنقل (بالعربية)
     nav: { about: "نبذة عني", projects: "المشاريع", skills: "المهارات", contact: "تواصل" },
     downloadCv: "تحميل السيرة الذاتية",
     langButton: "EN",
     theme: { toLight: "الوضع النهاري", toDark: "الوضع الليلي" },
 
+    // 💡 HINT: القسم الرئيسي في أعلى الصفحة (بالعربية)
     hero: {
       kicker: "مهندس معماري — القاهرة، مصر",
       firstName: "أحمد",
@@ -168,6 +185,7 @@ export const translations = {
       scale: "مقياس 1:1",
     },
 
+    // 💡 HINT: قسم نبذة عني (بالعربية)
     about: {
       number: "01",
       label: "نبذة عني",
@@ -195,30 +213,37 @@ export const translations = {
       englishLevel: "إتقان مهني في بيئة العمل",
     },
 
+    // 💡 HINT: قسم المشاريع والتصنيفات (بالعربية)
     projects: {
       number: "02",
       label: "أعمال مختارة",
       sheet: "لوحة A-02",
       title: "المشاريع",
       subtitle:
-        "ستة مشاريع مختارة مقسّمة على ثلاث تصنيفات — تصميمات خارجية، فيلا مودرن وتصميم داخلي. وكل مشروع يحتوي على سلايدر بجميع صوره.",
+        "سبعة مشاريع مختارة مقسّمة على أربع تصنيفات — تصميمات خارجية، فيلا مودرن وتصميم داخلي وعمارة. وكل مشروع يحتوي على سلايدر بجميع صوره.",
       all: "كل المشاريع",
       exterior: "تصميمات خارجية",
       villa: "فيلا مودرن",
       interior: "تصميم داخلي",
-      // سطر وصف يظهر أسفل فهرس التصنيفات
+      architecture: "عمارة",
+      
+      // 💡 HINT: أوصاف الفلاتر والتصنيفات (بالعربية)
       catDesc: {
-        all: "كل مشاريع الملف — تصميمات خارجية وفيلات مودرن وتصميم داخلي.",
+        all: "كل مشاريع الملف — تصميمات خارجية وفيلات مودرن وتصميم داخلي وعمارة.",
         exterior: "واجهات ومبانٍ تجارية ودراسات كتل للمواقع.",
         villa: "فيلات مودرن خاصة ومساكن عائلية.",
         interior: "تصميم داخلي وخامات وإظهار ثلاثي الأبعاد.",
+        architecture: "مجمعات معمارية متكاملة وتخطيط عمراني.",
       },
       projectWord: "مشاريع",
       viewProject: "عرض التفاصيل",
-      // 🧰 سلاسل الأدوات — تظهر كبادجات على الكروت وداخل نافذة التفاصيل
+
+      // 💡 HINT: مسميات البرامج والأدوات (بالعربية)
       "sketchup-vray": "سكتش أب + في راي",
       "max-vray": "ثري دي ماكس + في راي",
       "cad-revit": "أوتوكاد + ريفيت",
+      "autocad-sketchup-revit-lumion": "أوتوكاد + سكتش أب + ريفيت + لوميون",
+      
       status: { complete: "مكتمل", ongoing: "تحت التنفيذ" },
       reset: "عرض كل المشاريع",
       imagePlaceholder: "الرندرات قريبًا",
@@ -233,6 +258,7 @@ export const translations = {
       slidesCount: "صور",
     },
 
+    // 💡 HINT: قسم المهارات والخبرة (بالعربية)
     skills: {
       number: "03",
       label: "المهارات والخبرات",
@@ -258,6 +284,7 @@ export const translations = {
       experienceTag: "أعمال المشاريع",
     },
 
+    // 💡 HINT: قسم التواصل (بالعربية)
     contact: {
       number: "04",
       label: "تواصل معي",
@@ -272,6 +299,7 @@ export const translations = {
       cvHint: "تريد الصورة الكاملة؟ حمّل سيرتي الذاتية.",
     },
 
+    // 💡 HINT: تذييل الصفحة (بالعربية)
     footer: {
       rights: "جميع الحقوق محفوظة.",
       basedOn: "مبني على",

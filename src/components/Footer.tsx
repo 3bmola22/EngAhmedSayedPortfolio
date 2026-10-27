@@ -13,12 +13,12 @@ export default function Footer() {
           <span className="font-display font-bold tracking-wider">{t.brand}</span>
         </a>
         <p className="text-center text-xs text-muted">
-          © {profile.graduationYear} {t.brand} — {t.footer.rights}
+          © {profile.graduationYear} {"3bmola@gmail.com"} — {t.footer.rights}
         </p>
         <p className="flex items-center gap-1.5 text-xs text-muted">
           {t.footer.basedOn}{" "}
           <a
-            href="https://github.com/3bmola22/Portfolio"
+            href="https://ahmed-abdlmawla-portfolio.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-accent underline-offset-2 hover:underline"

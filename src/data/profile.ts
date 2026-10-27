@@ -9,7 +9,17 @@
 
 import profilePhoto from "../assets/profile.jpg";
 import villa1 from "../assets/villa.jpg" ;
-import modernVilla from "../assets/modernVilla.jpg" ;
+import mainProJect from "../assets/mainProJect.jpg" ;
+import mainProJect2 from "../assets/mainProJect2.jpg" ;
+import mainProJect3 from "../assets/mainProJect3.jpg" ;
+import mainProJect4 from "../assets/mainProJect4.jpg" ;
+import mainProJect5 from "../assets/mainProJect5.jpg" ;
+import mainProJect6 from "../assets/mainProJect6.jpg" ;
+import mainProJect7 from "../assets/mainProJect7.jpg" ;
+import mainProJect8 from "../assets/mainProJect8.jpg" ;
+import mainProJect9 from "../assets/mainProJect9.jpg" ;
+import mainProJect10 from "../assets/mainProJect10.jpg" ;
+import mainProJect11 from "../assets/mainProJect11.jpg" ;
 import modernVilla12 from "../assets/modernVilla12.jpg" ;
 import modernVilla2 from "../assets/modernVilla2.jpg" ;
 import modernVilla3 from "../assets/modernVilla3.jpg" ;
@@ -30,7 +40,7 @@ import warmWoodBedroom2 from "../assets/warmWoodBedroom2.jpg" ;
 import warmWoodBedroom3 from "../assets/warmWoodBedroom3.jpg" ;
 export const profile = {
   photo: profilePhoto,
-  cvDriveFileId: "PASTE_YOUR_CV_FILE_ID_HERE",
+  cvDriveFileId: "1mxWNptgx83gcbgcB-mBg0VTYF5gpzZk_",
   phone: "+20 1159755510",
   phoneHref: "tel:+201159755510",
   whatsappHref: "https://wa.me/201159755510",
@@ -50,8 +60,8 @@ export const cvDownloadUrl = `https://drive.google.com/uc?export=download&id=${p
    A project can sit in more than one category (see `categories` below).
    يمكن أن ينتمي المشروع لأكثر من تصنيف.
    ========================================================================== */
-export type ProjectType = "exterior" | "villa" | "interior";
-export const categoryOrder: ProjectType[] = ["exterior", "villa", "interior"];
+export type ProjectType = "exterior" | "villa" | "interior" |"architecture";
+export const categoryOrder: ProjectType[] = ["exterior", "villa", "interior","architecture"];
 
 /* ============================================================================
    🧰  TOOL CHAINS  |  سلاسل الأدوات  (3)
@@ -61,12 +71,13 @@ export const categoryOrder: ProjectType[] = ["exterior", "villa", "interior"];
    (These appear as badges on the card and inside the details modal)
    (تظهر كبادجات على الكارت وداخل نافذة التفاصيل)
    ========================================================================== */
-export type ToolGroup = "sketchup-vray" | "max-vray" | "cad-revit";
+export type ToolGroup = "sketchup-vray" | "max-vray" | "cad-revit" |"autocad-sketchup-revit-lumion";
 
 export const TOOL_APPS: Record<ToolGroup, string[]> = {
   "sketchup-vray": ["SketchUp", "V-Ray"],
   "max-vray": ["3ds Max", "V-Ray"],
   "cad-revit": ["AutoCAD", "Revit"],
+  "autocad-sketchup-revit-lumion": ["AutoCAD", "SketchUp", "Revit", "Lumion"],
 };
 
 /* ============================================================================
@@ -222,7 +233,7 @@ export const projects: Project[] = [
   {
     // 📸 13 photos (STOCK placeholders) — replace with your 13 renders
     images: [
-     modernVilla ,modernVilla2,modernVilla3,modernVilla4,modernVilla5,modernVilla6,modernVilla7,modernVilla8,modernVilla9,modernVilla10,modernVilla11,modernVilla12
+     modernVilla2,modernVilla3,modernVilla4,modernVilla5,modernVilla6,modernVilla7,modernVilla8,modernVilla9,modernVilla10,modernVilla11,modernVilla12
     ],
     categories: ["villa", "exterior"], // فيلا مودرن + تصميمات خارجية
     toolsets: ["cad-revit"],
@@ -235,6 +246,25 @@ export const projects: Project[] = [
     ar: {
       title: "فيلا مودرن",
       desc: "فيلا مودرن تتميز بتداخل الكتل الهندسية، واستخدام الأقواس في الفتحات، مع دمج الزجاج والخرسانة والشرائح الرأسية لإضفاء طابع عصري وأنيق على التصميم.",
+      location: "القاهرة، مصر",
+    },
+  },
+  {
+    // 📸 13 photos (STOCK placeholders) — replace with your 13 renders
+    images: [
+     mainProJect,mainProJect2,mainProJect3,mainProJect4,mainProJect5,mainProJect6,mainProJect7,mainProJect8,mainProJect9,mainProJect10,mainProJect11
+    ],
+    categories: [ "architecture"], //  Main project
+    toolsets: ["autocad-sketchup-revit-lumion"],
+    status: "complete",
+    en: {
+    title: "Inclusive Craft City for People of Determination",
+  desc: "An integrated craft city that combines educational, commercial, artisanal, residential, and recreational activities. The design draws on the traditional Siwa architectural style, featuring internal courtyards, geometric elements, and traditional ornaments, while integrating green spaces and palm trees to create a harmonious and comfortable environment.",
+      location: "Cairo, Egypt",
+    },
+    ar: {
+      title: "مشروع مدينة حرفية متكاملة لذوي الهمم",
+      desc: "المشروع عبارة عن مدينة حرفية متكاملة تجمع بين الأنشطة التعليمية والتجارية والحرفية والسكنية والترفيهية، مع الاعتماد على الطابع المعماري التراثي المستوحى من العمارة السيوية، واستخدام الأفنية الداخلية والعناصر الهندسية والزخارف التقليدية، مع دمج المساحات الخضراء وأشجار النخيل لتحقيق بيئة متناسقة ومريحة.",
       location: "القاهرة، مصر",
     },
   },

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type TouchEvent } from "react";
 import {
   Building2,
+  BuildingComplex,
   ChevronLeft,
   ChevronRight,
   Home,
@@ -33,6 +34,7 @@ const categoryIcon: Record<Filter, typeof Building2> = {
   exterior: Building2,
   villa: Home,
   interior: Sofa,
+  architecture : BuildingComplex ,
 };
 
 /* ============================================================================
@@ -412,6 +414,7 @@ export default function Projects() {
       exterior: 0,
       villa: 0,
       interior: 0,
+      architecture : 0,
     };
     projects.forEach((p) => p.categories.forEach((c) => (map[c] += 1)));
     return map;
