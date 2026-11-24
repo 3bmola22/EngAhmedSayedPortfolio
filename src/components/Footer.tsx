@@ -18,7 +18,7 @@ export default function Footer() {
         <p className="flex items-center gap-1.5 text-xs text-muted">
           {t.footer.basedOn}{" "}
           <a
-            href="https://ahmed-abdlmawla-portfolio.vercel.app"
+            href="https://ahmed-salamah.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-accent underline-offset-2 hover:underline"
