@@ -153,8 +153,8 @@ export const translations = {
     // 💡 HINT: Footer Section / تذييل الصفحة
     footer: {
       rights: "All rights reserved.",
-      basedOn: "Based on",
-      source: "source portfolio",
+      basedOn: "Developed by",
+      source: "Ahmed Salamah",
     },
   },
 
@@ -302,8 +302,8 @@ export const translations = {
     // 💡 HINT: تذييل الصفحة (بالعربية)
     footer: {
       rights: "جميع الحقوق محفوظة.",
-      basedOn: "مبني على",
-      source: "الموقع الأصلي",
+      basedOn: "تطوير",
+      source: "احمد سلامه",
     },
   },
 } as const;
